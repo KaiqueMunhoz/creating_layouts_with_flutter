@@ -17,13 +17,9 @@ class MyApp extends StatelessWidget {
                 margin: EdgeInsets.only(left: 100.0, top: 10.0),
                 width: 100.0,
                 height: 100.0,
+                child: FlutterLogo(),
                 decoration: BoxDecoration(
-                  gradient: RadialGradient(colors: [
-                    Colors.purple,
-                    Colors.green,
-                    Colors.blue,
-                    Colors.red,
-                  ]),
+                  color: Colors.yellow,
                 ),
               ),
               Container(
@@ -31,46 +27,32 @@ class MyApp extends StatelessWidget {
                 width: 100.0,
                 height: 100.0,
                 decoration: BoxDecoration(
-                  gradient: RadialGradient(radius: 0.25, colors: [
-                    Colors.purple,
-                    Colors.green,
-                    Colors.blue,
-                    Colors.red,
-                  ]),
+                  image: DecorationImage(
+                      image: NetworkImage('http://bit.ly/flutter_tiger')),
+                  color: Colors.orange,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 100.0, top: 10.0),
+                width: 200.0,
+                height: 200.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage('http://bit.ly/flutter_tiger'),
+                      fit: BoxFit.fill),
+                  color: Colors.orange,
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(left: 100.0, top: 10.0),
                 width: 100.0,
-                height: 150.0,
+                height: 300.0,
                 decoration: BoxDecoration(
-                    gradient: RadialGradient(
-                        radius: 0.25,
-                        center: Alignment(0.0, 0.5),
-                        colors: [
-                          Colors.purple,
-                          Colors.green,
-                          Colors.blue,
-                          Colors.red,
-                        ]),
-                    borderRadius: BorderRadius.all(Radius.circular((25)))),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 100.0, top: 10.0),
-                width: 100.0,
-                height: 150.0,
-                child: FlutterLogo(),
-                decoration: BoxDecoration(
-                    gradient: RadialGradient(
-                        radius: 0.25,
-                        center: Alignment(0.0, 0.5),
-                        colors: [
-                          Colors.purple,
-                          Colors.green,
-                          Colors.blue,
-                          Colors.red,
-                        ]),
-                    borderRadius: BorderRadius.all(Radius.circular((25)))),
+                  image: DecorationImage(
+                      image: NetworkImage('http://bit.ly/flutter_tiger'),
+                      fit: BoxFit.fill),
+                  color: Colors.orange,
+                ),
               ),
             ],
           )),
