@@ -14,23 +14,41 @@ class MyApp extends StatelessWidget {
           body: Column(
             children: <Widget>[
               Container(
+                margin: EdgeInsets.all(100.0),
                 color: Colors.orange,
                 width: 100.0,
                 height: 100.0,
               ),
               Container(
+                margin: EdgeInsets.only(left: 100.0),
                 color: Colors.blue,
                 width: 100.0,
                 height: 100.0,
               ),
               Container(
+                margin: EdgeInsets.symmetric(vertical: 16.0),
                 color: Colors.purple,
                 width: 100.0,
                 height: 100.0,
               ),
               Container(
-                color: Colors.red,
-                child: Text('Hello Container Some other text'),
+                margin: EdgeInsets.symmetric(vertical: 16.0),
+                width: 100.0,
+                height: 100.0,
+                decoration:
+                    BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 16.0),
+                width: 100.0,
+                height: 100.0,
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25.0),
+                    bottomRight: Radius.circular(10.0),
+                  ),
+                ),
               ),
             ],
           )),
