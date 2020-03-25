@@ -1,0 +1,4 @@
+#Mon Mar 23 20:58:08 BRT 2020
+base.0=/Users/kaique.munhoz/Projects/Outros/Github/creating_layouts_with_flutter/flutter/04-module/time_app_demo/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
