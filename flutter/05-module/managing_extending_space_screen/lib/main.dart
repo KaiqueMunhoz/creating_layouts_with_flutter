@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text("Stack"),
         ),
@@ -31,9 +31,8 @@ class Home extends StatelessWidget {
     return Container(
       width: sizeX,
       height: sizeY,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Stack(
+        fit: StackFit.expand,
         children: createSquares(5),
       ),
     );
@@ -50,13 +49,15 @@ List<Widget> createSquares(int numSquares) {
     Colors.lightBlue
   ];
   List<Widget> squares = List<Widget>();
-
+  squares.add(Container(color: Colors.black));
   while (i < numSquares) {
-    Expanded square = Expanded(
-      flex: i,
+    Positioned square = Positioned(
+      top: 100 + i.toDouble() * 100,
+      left: 25 + i.toDouble() * 25,
       child: Container(
         color: colors[i],
-        height: 60,
+        width: 60.0 * (numSquares - i),
+        height: 60.0 * (numSquares - i),
         child: Text(
           i.toString(),
         ),
